@@ -17,13 +17,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca.Cliente.Infraest
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca.Cliente.Aplicacion", "Biblioteca.Cliente.Aplicacion\Biblioteca.Cliente.Aplicacion.csproj", "{2881879D-D9F9-41F1-8399-CA20FB2DB3E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.Usuario.Api", "Biblioteca.Usuario.Api\Biblioteca.Usuario.Api.csproj", "{0EA5A204-3601-4EE2-957A-5B245997EEB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca.Usuario.Api", "Biblioteca.Usuario.Api\Biblioteca.Usuario.Api.csproj", "{0EA5A204-3601-4EE2-957A-5B245997EEB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.Usuario.Aplicacion", "Biblioteca.Usuario.Aplicacion\Biblioteca.Usuario.Aplicacion.csproj", "{C1D47C9B-70CD-4503-A915-80A2E70E9EA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca.Usuario.Aplicacion", "Biblioteca.Usuario.Aplicacion\Biblioteca.Usuario.Aplicacion.csproj", "{C1D47C9B-70CD-4503-A915-80A2E70E9EA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.Usuario.Dominio", "Biblioteca.Usuario.Dominio\Biblioteca.Usuario.Dominio.csproj", "{3940CAD6-344A-4522-871E-CDB96C7B070B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca.Usuario.Dominio", "Biblioteca.Usuario.Dominio\Biblioteca.Usuario.Dominio.csproj", "{3940CAD6-344A-4522-871E-CDB96C7B070B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.Usuario.Infraestructura", "Biblioteca.Usuario.Infraestructura\Biblioteca.Usuario.Infraestructura.csproj", "{4CC563A8-0420-419F-B9E9-4D96AA191909}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca.Usuario.Infraestructura", "Biblioteca.Usuario.Infraestructura\Biblioteca.Usuario.Infraestructura.csproj", "{4CC563A8-0420-419F-B9E9-4D96AA191909}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libro", "Libro", "{DB271838-5D52-40E2-B6C9-EFD3DF3F60FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prestamo", "Prestamo", "{5D3F7D3B-C3C6-40AC-9467-A9D189FD6CA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -78,6 +82,8 @@ Global
 		{C1D47C9B-70CD-4503-A915-80A2E70E9EA1} = {DEDB70C9-6772-4972-BB07-BF50CAAA44F4}
 		{3940CAD6-344A-4522-871E-CDB96C7B070B} = {DEDB70C9-6772-4972-BB07-BF50CAAA44F4}
 		{4CC563A8-0420-419F-B9E9-4D96AA191909} = {DEDB70C9-6772-4972-BB07-BF50CAAA44F4}
+		{DB271838-5D52-40E2-B6C9-EFD3DF3F60FF} = {DA529D97-045A-44FF-9F2A-4B59901EFA6D}
+		{5D3F7D3B-C3C6-40AC-9467-A9D189FD6CA2} = {DA529D97-045A-44FF-9F2A-4B59901EFA6D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D0C8402C-7896-4B33-B93C-8FAB2DCF2482}
