@@ -1,11 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using static Biblioteca.Cliente.Api.Routes.ApiRoutes;
-using dominio = Biblioteca.Cliente.Dominio.Entidades;
+using dominio = Biblioteca.Cliente.Dominio;
 namespace Biblioteca.Cliente.Api.Controllers
 {
     [ApiController]
