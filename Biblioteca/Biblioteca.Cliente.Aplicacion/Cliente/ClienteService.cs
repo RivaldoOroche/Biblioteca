@@ -10,7 +10,7 @@ using dominio = Biblioteca.Cliente.Dominio.Entidades;
 
 namespace Biblioteca.Cliente.Aplicacion.Cliente
 {
-    public class ClienteService:IClienteService
+    public class ClienteService : IClienteService
     {
         private readonly ICollectionContext<dominio.Cliente> _cliente;
         private readonly IBaseRepository<dominio.Cliente> _clienteR;
@@ -23,7 +23,7 @@ namespace Biblioteca.Cliente.Aplicacion.Cliente
         public List<dominio.Cliente> ListarClientes()
         {
             Expression<Func<dominio.Cliente, bool>> filter = s => s.esEliminado == false;
-            var items=(_cliente.Context().FindAsync(filter,null).Result).ToList();
+            var items = (_cliente.Context().FindAsync(filter, null).Result).ToList();
             return items;
         }
         public bool RegistrarCliente(dominio.Cliente cliente)

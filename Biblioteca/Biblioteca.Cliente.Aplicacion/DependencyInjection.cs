@@ -23,18 +23,15 @@ namespace Biblioteca.Cliente.Aplicacion
 
             //Entidades            
             services.TryAddScoped<ICollectionContext<dominio.Cliente>>(x => new CollectionContext<dominio.Cliente>(x.GetService<IDbContext>()));
-            //services.TryAddScoped<ICollectionContext<dominio.Categoria>>(x => new CollectionContext<dominio.Categoria>(x.GetService<IDbContext>()));
 
             //Como Repo
             services.TryAddScoped<IBaseRepository<dominio.Cliente>>(x => new BaseRepository<dominio.Cliente>(x.GetService<IDbContext>()));
-            //services.TryAddScoped<IBaseRepository<dominio.Categoria>>(x => new BaseRepository<dominio.Categoria>(x.GetService<IDbContext>()));
 
             #endregion
 
             #region Servicios
 
             services.AddScoped<IClienteService, ClienteService>();
-            //services.AddScoped<ICategoriaService, CategoriaService>();
 
             #endregion
 
