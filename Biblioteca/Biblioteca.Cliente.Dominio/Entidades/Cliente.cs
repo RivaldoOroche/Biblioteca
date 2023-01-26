@@ -1,12 +1,15 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using Release.MongoDB.Repository;
+using Release.MongoDB.Repository.Model;
 
 namespace Biblioteca.Cliente.Dominio.Entidades
 {
+    [CollectionProperty("cliente")]
     [BsonIgnoreExtraElements]
-    public class Cliente
+    public class Cliente :EntityToLower<ObjectId>
     {
-        [BsonId]
+     
         [BsonRepresentation(BsonType.ObjectId)]
         public string _id { get; set; }
         public int idCliente { get; set; }
