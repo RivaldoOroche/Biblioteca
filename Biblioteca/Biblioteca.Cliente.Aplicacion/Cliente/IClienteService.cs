@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using dominio = Biblioteca.Cliente.Dominio.Entidades;
+﻿using dominio = Biblioteca.Cliente.Dominio.Entidades;
 
 namespace Biblioteca.Cliente.Aplicacion.Cliente
 {

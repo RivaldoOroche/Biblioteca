@@ -10,7 +10,7 @@ namespace Biblioteca.Cliente.Infraestructura
 {
     public class DbContext : DataContext, IDbContext
     {
-        public DbContext(MongoUrl mongoUrl) : base(mongoUrl) 
+        public DbContext(MongoUrl mongoUrl) : base(mongoUrl)
         {
         }
     }

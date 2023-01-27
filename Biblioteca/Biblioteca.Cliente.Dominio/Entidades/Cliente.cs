@@ -7,11 +7,8 @@ namespace Biblioteca.Cliente.Dominio.Entidades
 {
     [CollectionProperty("cliente")]
     [BsonIgnoreExtraElements]
-    public class Cliente :EntityToLower<ObjectId>
+    public class Cliente : EntityToLower<ObjectId>
     {
-     
-        //[BsonRepresentation(BsonType.ObjectId)]
-        //public string _id { get; set; }
         public int idCliente { get; set; }
         public string dniCliente { get; set; }
         public string nombCliente { get; set; }
@@ -19,7 +16,6 @@ namespace Biblioteca.Cliente.Dominio.Entidades
         public string telfCliente { get; set; }
         public string emailCliente { get; set; }
         public string direCliente { get; set; }
-        public int estadoCliente { get; set; }
 
     }
 }
