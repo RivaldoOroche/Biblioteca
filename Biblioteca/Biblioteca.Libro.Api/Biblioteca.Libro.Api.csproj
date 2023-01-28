@@ -14,9 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Biblioteca.Cliente.Aplicacion\Biblioteca.Cliente.Aplicacion.csproj" />
-    <ProjectReference Include="..\Biblioteca.Cliente.Dominio\Biblioteca.Cliente.Dominio.csproj" />
-    <ProjectReference Include="..\Biblioteca.Cliente.Infraestructura\Biblioteca.Cliente.Infraestructura.csproj" />
+    <ProjectReference Include="..\Biblioteca,Libro.Dominio\Biblioteca.Libro.Dominio.csproj" />
+    <ProjectReference Include="..\Biblioteca.Libro.Aplicacion\Biblioteca.Libro.Aplicacion.csproj" />
+    <ProjectReference Include="..\Biblioteca.Libro.Infraestructura\Biblioteca.Libro.Infraestructura.csproj" />
   </ItemGroup>
 
 </Project>
