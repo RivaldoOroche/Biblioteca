@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using dominio = Biblioteca.Libro.Dominio;
+using dominio = Biblioteca.Libro.Dominio.Entidades;
+using static Biblioteca.Libro.Api.Routes.ApiRoutes;
+using Biblioteca.Libro.Aplicacion.Libro;
 
 namespace Biblioteca.Libro.Api.Controllers
 {
@@ -9,68 +11,43 @@ namespace Biblioteca.Libro.Api.Controllers
     [ApiController]
     public class LibroController : ControllerBase
     {
-        //private ProductoQueryAll db = ProductoQueryAll();
-        [HttpGet(Routes.ApiRoutes.RouteLibro.GetAll)]
-        public IEnumerable<dominio.Entidades.Libro> ListarLibros()
-        {
-            #region
-            var client = new MongoClient("mongodb://localhost:27017");
-            var database = client.GetDatabase("biblioteca");
-            var colecction = database.GetCollection<dominio.Entidades.Libro>("Libro");
-            #endregion
+        private readonly ILibroService _service;
 
-            var listaLibro = colecction.Find(x => true).ToList();
+        public LibroController(ILibroService service)
+        {
+            _service = service;
+        }
+
+        [HttpGet(RouteLibro.GetAll)]
+        public IEnumerable<dominio.Libro> ListarLibros()
+        {
+
+            var listaLibro = _service.ListarLibros();
             return listaLibro;
         }
-        [HttpGet(Routes.ApiRoutes.RouteLibro.GetById)]
-        public dominio.Entidades.Libro BuscarLibro(int id)
+
+        [HttpGet(RouteLibro.GetById)]
+        public dominio.Libro BuscarLibro(int id)
         {
-            #region
-            var client = new MongoClient("mongodb://localhost:27017");
+            var objLibro = _service.Libro(id);
 
-            var database = client.GetDatabase("biblioteca");
-            var colecction = database.GetCollection<dominio.Entidades.Libro>("Libro");
-            #endregion
-
-            var objLibro = colecction.Find(x => x.idLibro == id).FirstOrDefault();
             return objLibro;
         }
 
-        [HttpPost(Routes.ApiRoutes.RouteLibro.Create)]
-        public ActionResult<dominio.Entidades.Libro> CrearLibro(dominio.Entidades.Libro Libro)
+        [HttpPost(RouteLibro.Create)]
+        public ActionResult<dominio.Libro> CrearLibro([FromBody] dominio.Libro Libro)
         {
-            #region
-            var client = new MongoClient("mongodb://localhost:27017");
-            var database = client.GetDatabase("biblioteca");
-            var colecction = database.GetCollection<dominio.Entidades.Libro>("Libro");
-            #endregion
+            _service.RegistrarLibro(Libro);
 
-            Libro._id = ObjectId.GenerateNewId().ToString();
-            colecction.InsertOne(Libro);
             return Ok();
         }
-        [HttpPut(Routes.ApiRoutes.RouteLibro.Update)]
-        public ActionResult<dominio.Entidades.Libro> ModificarLibro(dominio.Entidades.Libro Libro)
-        {
-            #region
-            var client = new MongoClient("mongodb://localhost:27017");
-            var database = client.GetDatabase("biblioteca");
-            var colecction = database.GetCollection<dominio.Entidades.Libro>("Libro");
-            #endregion
-            colecction.FindOneAndReplace(x => x._id == Libro._id, Libro);
-            return Ok();
-        }
-        [HttpDelete(Routes.ApiRoutes.RouteLibro.Delete)]
-        public ActionResult<dominio.Entidades.Libro> EliminarLibro(int id)
-        {
-            #region
-            var client = new MongoClient("mongodb://localhost:27017");
-            var database = client.GetDatabase("biblioteca");
-            var colecction = database.GetCollection<dominio.Entidades.Libro>("Libro");
-            #endregion
 
-            colecction.FindOneAndDelete(x => x.idLibro == id);
-            return Ok();
+        [HttpDelete(RouteLibro.Delete)]
+        public ActionResult<dominio.Libro> EliminarLibro(int id)
+        {
+            _service.Eliminar(id);
+
+            return Ok(id);
         }
     }
 }
