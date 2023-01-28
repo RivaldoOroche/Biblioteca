@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using Release.MongoDB.Repository;
+using Release.MongoDB.Repository.Model;
 
 namespace Biblioteca.Usuario.Dominio.Entidades
 {
-
+    [CollectionProperty("usuario")]
     [BsonIgnoreExtraElements]
-    public class Usuario
-    {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string _id { get; set; }
+    public class Usuario : EntityToLower<ObjectId>
+    {   
         public int idUsuario { get; set; }
         public string dniUsuario { get; set; }
         public string nombUsuario { get; set; }
