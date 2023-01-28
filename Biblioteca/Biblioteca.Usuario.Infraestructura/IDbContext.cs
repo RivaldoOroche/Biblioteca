@@ -1,5 +1,5 @@
 ﻿using Release.MongoDB.Repository;
-namespace Biblioteca.Cliente.Infraestructura
+namespace Biblioteca.Usuario.Infraestructura
 {
         public interface IDbContext : IDataContext 
         { 

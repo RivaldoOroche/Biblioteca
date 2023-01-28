@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Release.MongoDB.Repository;
 using MongoDB.Driver;
 
-namespace Biblioteca.Cliente.Infraestructura
+namespace Biblioteca.Usuario.Infraestructura
 {
     public class DbContext : DataContext, IDbContext
     {
