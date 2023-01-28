@@ -8,17 +8,6 @@
       "sslPort": 0
     }
   },
- /* "profiles": {
-    "Biblioteca.Cliente.Api": {
-      "commandName": "Project",
-      "dotnetRunMessages": true,
-      "launchBrowser": true,
-      "launchUrl": "swagger",
-      "applicationUrl": "http://localhost:5222",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },*/
     "profiles": {
       "IIS Express": {
         "commandName": "IISExpress",

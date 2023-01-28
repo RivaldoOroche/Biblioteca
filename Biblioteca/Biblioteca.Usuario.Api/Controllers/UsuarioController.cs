@@ -1,76 +1,51 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using dominio = Biblioteca.Usuario.Dominio;
-namespace Biblioteca.Usuario.Api.Controllers
-{
+using dominio = Biblioteca.Usuario.Dominio.Entidades;
+using static Biblioteca.Usuario.Api.Routes.ApiRoutes;
+using Biblioteca.Usuario.Aplicacion.Usuario;
 
-    [ApiController]
+[ApiController]
     public class UsuarioController : ControllerBase
     {
-        //private ProductoQueryAll db = ProductoQueryAll();
-        [HttpGet(Routes.ApiRoutes.RouteUsuario.GetAll)]
-        public IEnumerable<dominio.Entidades.Usuario> ListarUsuarios()
-        {
-            #region
-            var client = new MongoClient("mongodb://localhost:27017");
-            var database = client.GetDatabase("biblioteca");
-            var colecction = database.GetCollection<dominio.Entidades.Usuario>("Usuario");
-            #endregion
+        private readonly IUsuarioService _service;
 
-            var listaUsuario = colecction.Find(x => true).ToList();
+        public UsuarioController(IUsuarioService service)
+        {
+            _service = service;
+        }
+
+        [HttpGet(RouteUsuario.GetAll)]
+        public IEnumerable<dominio.Usuario> ListarUsuarios()
+        {
+
+            var listaUsuario = _service.ListarUsuarios();
             return listaUsuario;
         }
-        [HttpGet(Routes.ApiRoutes.RouteUsuario.GetById)]
-        public dominio.Entidades.Usuario BuscarUsuario(int id)
+
+        [HttpGet(RouteUsuario.GetById)]
+        public dominio.Usuario BuscarUsuario(int id)
         {
-            #region
-            var client = new MongoClient("mongodb://localhost:27017");
+            var objUsuario = _service.Usuario(id);
 
-            var database = client.GetDatabase("biblioteca");
-            var colecction = database.GetCollection<dominio.Entidades.Usuario>("Usuario");
-            #endregion
-
-            var objUsuario = colecction.Find(x => x.idUsuario == id).FirstOrDefault();
             return objUsuario;
         }
 
-        [HttpPost(Routes.ApiRoutes.RouteUsuario.Create)]
-        public ActionResult<dominio.Entidades.Usuario> CrearUsuario(dominio.Entidades.Usuario Usuario)
+        [HttpPost(RouteUsuario.Create)]
+        public ActionResult<dominio.Usuario> CrearUsuario([FromBody] dominio.Usuario Usuario)
         {
-            #region
-            var client = new MongoClient("mongodb://localhost:27017");
-            var database = client.GetDatabase("biblioteca");
-            var colecction = database.GetCollection<dominio.Entidades.Usuario>("Usuario");
-            #endregion
+            _service.RegistrarUsuario(Usuario);
 
-            Usuario._id = ObjectId.GenerateNewId().ToString();
-            colecction.InsertOne(Usuario);
             return Ok();
         }
-        [HttpPut(Routes.ApiRoutes.RouteUsuario.Update)]
-        public ActionResult<dominio.Entidades.Usuario> ModificarUsuario(dominio.Entidades.Usuario Usuario)
-        {
-            #region
-            var client = new MongoClient("mongodb://localhost:27017");
-            var database = client.GetDatabase("biblioteca");
-            var colecction = database.GetCollection<dominio.Entidades.Usuario>("Usuario");
-            #endregion
-            colecction.FindOneAndReplace(x => x._id == Usuario._id, Usuario);
-            return Ok();
-        }
-        [HttpDelete(Routes.ApiRoutes.RouteUsuario.Delete)]
-        public ActionResult<dominio.Entidades.Usuario> EliminarUsuario(int id)
-        {
-            #region
-            var client = new MongoClient("mongodb://localhost:27017");
-            var database = client.GetDatabase("biblioteca");
-            var colecction = database.GetCollection<dominio.Entidades.Usuario>("Usuario");
-            #endregion
 
-            colecction.FindOneAndDelete(x => x.idUsuario == id);
-            return Ok();
+        [HttpDelete(RouteUsuario.Delete)]
+        public ActionResult<dominio.Usuario> EliminarUsuario(int id)
+        {
+            _service.Eliminar(id);
+
+            return Ok(id);
         }
     }
-}
+
     

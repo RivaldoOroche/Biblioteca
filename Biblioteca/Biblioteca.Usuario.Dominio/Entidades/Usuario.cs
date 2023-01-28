@@ -15,7 +15,6 @@ namespace Biblioteca.Usuario.Dominio.Entidades
         public string apeUsuario { get; set; }
         public string login { get; set; }
         public string password { get; set; }
-        public string estUsu { get; set; }
      }
 }
 
