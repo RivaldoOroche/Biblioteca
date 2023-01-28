@@ -29,6 +29,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libro", "Libro", "{DB271838
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prestamo", "Prestamo", "{5D3F7D3B-C3C6-40AC-9467-A9D189FD6CA2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Autor", "Autor", "{BA595BB6-2051-492B-9CBB-E10953609760}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
