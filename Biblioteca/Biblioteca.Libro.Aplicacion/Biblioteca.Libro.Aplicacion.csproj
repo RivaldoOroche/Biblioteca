@@ -12,4 +12,9 @@
     <PackageReference Include="Release.MongoDB.Repository" Version="1.2.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Biblioteca,Libro.Dominio\Biblioteca.Libro.Dominio.csproj" />
+    <ProjectReference Include="..\Biblioteca.Libro.Infraestructura\Biblioteca.Libro.Infraestructura.csproj" />
+  </ItemGroup>
+
 </Project>
