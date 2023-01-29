@@ -1,9 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Biblioteca.Autor.Api\Biblioteca.Autor.Api.csproj" />
+    <ProjectReference Include="..\Biblioteca.Autor.Dominio\Biblioteca.Autor.Dominio.csproj" />
+    <ProjectReference Include="..\Biblioteca.Autor.Infraestructura\Biblioteca.Autor.Infraestructura.csproj" />
+  </ItemGroup>
 
 </Project>
