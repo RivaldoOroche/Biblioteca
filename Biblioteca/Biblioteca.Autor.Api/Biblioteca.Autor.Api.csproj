@@ -13,4 +13,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Biblioteca.Autor.Aplicacion\Biblioteca.Autor.Aplicacion.csproj" />
+    <ProjectReference Include="..\Biblioteca.Autor.Dominio\Biblioteca.Autor.Dominio.csproj" />
+  </ItemGroup>
+
 </Project>
