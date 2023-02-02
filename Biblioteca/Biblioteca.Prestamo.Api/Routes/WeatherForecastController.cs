@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Biblioteca.Prestamo.Api.Controllers
+namespace Biblioteca.Prestamo.Api.Routes
 {
     [ApiController]
     [Route("[controller]")]
