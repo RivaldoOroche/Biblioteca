@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Biblioteca.Prestamo.Dominio\Biblioteca.Prestamo.Dominio.csproj" />
+    <ProjectReference Include="..\Biblioteca.Prestamo.Infraestructura\Biblioteca.Prestamo.Infraestructura.csproj" />
+  </ItemGroup>
+
 </Project>
