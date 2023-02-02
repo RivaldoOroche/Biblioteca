@@ -7,7 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+      <PackageReference Include="MongoDB.Bson" Version="2.18.0" />
+      <PackageReference Include="MongoDB.Driver" Version="2.18.0" />
+      <PackageReference Include="Release.MongoDB.Repository" Version="1.2.4" />
+      <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+    
+ <ItemGroup>
+    <ProjectReference Include="..\Biblioteca.Prestamo.Aplicacion\Biblioteca.Prestamo.Aplicacion.csproj" />
+    <ProjectReference Include="..\Biblioteca.Prestamo.Dominio\Biblioteca.Prestamo.Dominio.csproj" />
+    <ProjectReference Include="..\Biblioteca.Prestamo.Infraestructura\Biblioteca.Prestamo.Infraestructura.csproj" />
   </ItemGroup>
 
 </Project>
