@@ -37,23 +37,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca.Libro.Dominio", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca.Libro.Infraestructura", "Biblioteca.Libro.Infraestructura\Biblioteca.Libro.Infraestructura.csproj", "{B59B9832-098C-4C0E-942E-CC97658F63F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.Prestamo.Api", "Biblioteca.Prestamo.Api\Biblioteca.Prestamo.Api.csproj", "{BF71A66A-434B-470F-9D50-BFA2054BC49F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca.Prestamo.Api", "Biblioteca.Prestamo.Api\Biblioteca.Prestamo.Api.csproj", "{BF71A66A-434B-470F-9D50-BFA2054BC49F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.Prestamo.Aplicacion", "Biblioteca.Prestamo.Aplicacion\Biblioteca.Prestamo.Aplicacion.csproj", "{BAA48C06-FC6C-4CC5-9116-7205AE06A678}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca.Prestamo.Aplicacion", "Biblioteca.Prestamo.Aplicacion\Biblioteca.Prestamo.Aplicacion.csproj", "{BAA48C06-FC6C-4CC5-9116-7205AE06A678}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.Prestamo.Dominio", "Biblioteca.Prestamo.Dominio\Biblioteca.Prestamo.Dominio.csproj", "{43CF72DD-4E73-4B4E-9003-80C0AEF63818}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca.Prestamo.Dominio", "Biblioteca.Prestamo.Dominio\Biblioteca.Prestamo.Dominio.csproj", "{43CF72DD-4E73-4B4E-9003-80C0AEF63818}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.Prestamo.Infraestructura", "Biblioteca.Prestamo.Infraestructura\Biblioteca.Prestamo.Infraestructura.csproj", "{72A36A37-73D3-4CEA-BA3F-98E0F5883534}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca.Prestamo.Infraestructura", "Biblioteca.Prestamo.Infraestructura\Biblioteca.Prestamo.Infraestructura.csproj", "{72A36A37-73D3-4CEA-BA3F-98E0F5883534}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Autor", "Autor", "{1C833E52-FEEF-4C45-85A7-45F894AC26DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.Autor.Api", "Biblioteca.Autor.Api\Biblioteca.Autor.Api.csproj", "{781E311D-13FA-4FD1-990D-6E1259AB85AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca.Autor.Api", "Biblioteca.Autor.Api\Biblioteca.Autor.Api.csproj", "{781E311D-13FA-4FD1-990D-6E1259AB85AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.Autor.Aplicacion", "Biblioteca.Autor.Aplicacion\Biblioteca.Autor.Aplicacion.csproj", "{6046C249-76FD-400D-BB7D-93517957C207}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca.Autor.Aplicacion", "Biblioteca.Autor.Aplicacion\Biblioteca.Autor.Aplicacion.csproj", "{6046C249-76FD-400D-BB7D-93517957C207}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.Autor.Dominio", "Biblioteca.Autor.Dominio\Biblioteca.Autor.Dominio.csproj", "{520C85BF-D9F7-4DE6-8E4A-F75E09E66789}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca.Autor.Dominio", "Biblioteca.Autor.Dominio\Biblioteca.Autor.Dominio.csproj", "{520C85BF-D9F7-4DE6-8E4A-F75E09E66789}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.Autor.Infraestructura", "Biblioteca.Autor.Infraestructura\Biblioteca.Autor.Infraestructura.csproj", "{1A798AB5-6D76-4017-BD91-FFFA12A7E61D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca.Autor.Infraestructura", "Biblioteca.Autor.Infraestructura\Biblioteca.Autor.Infraestructura.csproj", "{1A798AB5-6D76-4017-BD91-FFFA12A7E61D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sistema", "Sistema", "{B635BA42-BDA9-40AE-91FC-619CCAB84125}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API Gateway", "API Gateway", "{1B29F41F-B7E1-4F8F-B166-3AF7763143B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -171,6 +175,7 @@ Global
 		{6046C249-76FD-400D-BB7D-93517957C207} = {1C833E52-FEEF-4C45-85A7-45F894AC26DD}
 		{520C85BF-D9F7-4DE6-8E4A-F75E09E66789} = {1C833E52-FEEF-4C45-85A7-45F894AC26DD}
 		{1A798AB5-6D76-4017-BD91-FFFA12A7E61D} = {1C833E52-FEEF-4C45-85A7-45F894AC26DD}
+		{1B29F41F-B7E1-4F8F-B166-3AF7763143B0} = {B635BA42-BDA9-40AE-91FC-619CCAB84125}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D0C8402C-7896-4B33-B93C-8FAB2DCF2482}
