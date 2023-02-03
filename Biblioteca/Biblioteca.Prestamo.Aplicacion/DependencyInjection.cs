@@ -1,13 +1,13 @@
-﻿using Biblioteca.Cliente.Infraestructura;
+﻿using Biblioteca.Prestamo.Infraestructura;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using MongoDB.Driver;
 using Release.MongoDB.Repository;
-using Biblioteca.Cliente.Aplicacion.Cliente;
-using dominio = Biblioteca.Cliente.Dominio.Entidades;
+using Biblioteca.Prestamo.Aplicacion.Prestamo;
+using dominio = Biblioteca.Prestamo.Dominio.Entidades;
 
-namespace Biblioteca.Cliente.Aplicacion
+namespace Biblioteca.Prestamo.Aplicacion
 {
     public static class DependencyInjection
     {
@@ -21,10 +21,10 @@ namespace Biblioteca.Cliente.Aplicacion
             services.AddScoped<IDbContext>(x => new DbContext(dbUrl));
 
             //Entidades            
-            services.TryAddScoped<ICollectionContext<dominio.Cliente>>(x => new CollectionContext<dominio.Cliente>(x.GetService<IDbContext>()));
+            services.TryAddScoped<ICollectionContext<dominio.Prestamo>>(x => new CollectionContext<dominio.Prestamo>(x.GetService<IDbContext>()));
 
             //Como Repo
-            services.TryAddScoped<IBaseRepository<dominio.Cliente>>(x => new BaseRepository<dominio.Cliente>(x.GetService<IDbContext>()));
+            services.TryAddScoped<IBaseRepository<dominio.Prestamo>>(x => new BaseRepository<dominio.Prestamo>(x.GetService<IDbContext>()));
 
             #endregion
 

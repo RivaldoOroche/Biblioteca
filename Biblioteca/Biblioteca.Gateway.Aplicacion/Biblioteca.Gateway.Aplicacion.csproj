@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Cliente\ClienteService.cs" />
+    <Compile Remove="Cliente\IClienteService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Bson" Version="2.19.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.19.0" />
+    <PackageReference Include="Release.MongoDB.Repository" Version="1.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Cliente\" />
+  </ItemGroup>
+
+</Project>
