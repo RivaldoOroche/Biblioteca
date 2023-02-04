@@ -34,8 +34,27 @@ namespace Biblioteca.Gateway.Aplicacion
             });
 
             #endregion
+            #region Autor Ms Autors
+
+            services.AddHttpClient("MsAutor", client =>
+            {
+                client.BaseAddress = new Uri(msSettings.AutorUrl);
+            });
+
+            #endregion
+            #region Libro Ms Libros
+
+            services.AddHttpClient("MsLibro", client =>
+            {
+                client.BaseAddress = new Uri(msSettings.LibroUrl);
+            });
+
+            #endregion
 
             services.AddTransient<ClientesClient.IClient, ClientesClient.Client>();
+            services.AddTransient<AutorClient.IClient, AutorClient.Client>();
+            services.AddTransient<LibroClient.IClient, LibroClient.Client>();
+
 
             return services;
         }

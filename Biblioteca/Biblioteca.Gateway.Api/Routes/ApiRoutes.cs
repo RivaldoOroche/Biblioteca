@@ -21,7 +21,34 @@
 
 
         }
+        public static class RouteAutor
+        {
+            //Para Leer
+            public const string GetAll = Base + "/autor/all";
+            public const string GetById = Base + "/autor/{id}";
+
+            //Write
+            public const string Create = Base + "/autor/create";
+            public const string Update = Base + "/autor/update";
+            public const string Delete = Base + "/autor/delete";
 
 
+
+        }
+
+        public static class RouteLibro
+        {
+            //Para Leer
+            public const string GetAll = Base + "/libro/all";
+            public const string GetById = Base + "/libro/{id}";
+
+            //Write
+            public const string Create = Base + "/libro/create";
+            public const string Update = Base + "/libro/update";
+            public const string Delete = Base + "/libro/delete";
+
+
+
+        }
     }
 }
