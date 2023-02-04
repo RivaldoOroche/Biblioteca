@@ -4,7 +4,7 @@
   "documentGenerator": {
     "fromDocument": {
       "url": "http://localhost:63524/swagger/v1/swagger.json",
-      "output": "ClienteClient.nswag.json",
+      "output": "ClientesClient.nswag.json",
       "newLineBehavior": "Auto"
     }
   },
@@ -24,7 +24,7 @@
       "useHttpClientCreationMethod": false,
       "httpClientType": "System.Net.Http.HttpClient",
       "useHttpRequestMessageCreationMethod": false,
-      "useBaseUrl": false,
+      "useBaseUrl": true,
       "generateBaseUrlProperty": true,
       "generateSyncMethods": false,
       "generatePrepareRequestAndProcessResponseAsAsyncMethods": false,
@@ -35,7 +35,7 @@
       "contractsNamespace": null,
       "contractsOutputFilePath": null,
       "parameterDateTimeFormat": "s",
-      "parameterDateFormat": "dd-MM-yyy",
+      "parameterDateFormat": "dd-MM-yyyy",
       "generateUpdateJsonSerializerSettingsMethod": true,
       "useRequestAndResponseSerializationSettings": false,
       "serializeTypeInformation": false,
@@ -55,7 +55,7 @@
       "wrapResponseMethods": [],
       "generateResponseClasses": true,
       "responseClass": "SwaggerResponse",
-      "namespace": "Biblioteca.Gateway.Api.ClienteClient",
+      "namespace": "Biblioteca.Gateway.Aplicacion.ClientesClient",
       "requiredPropertiesMustBeDefined": true,
       "dateType": "System.DateTimeOffset",
       "jsonConverters": null,
@@ -92,7 +92,7 @@
       "enumNameGeneratorType": null,
       "serviceHost": null,
       "serviceSchemes": null,
-      "output": "ClienteClient.cs",
+      "output": "ClientesClient.cs",
       "newLineBehavior": "Auto"
     }
   }

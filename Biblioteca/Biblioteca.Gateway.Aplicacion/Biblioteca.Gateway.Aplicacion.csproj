@@ -14,11 +14,14 @@
   <ItemGroup>
     <PackageReference Include="MongoDB.Bson" Version="2.19.0" />
     <PackageReference Include="MongoDB.Driver" Version="2.19.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="Release.MongoDB.Repository" Version="1.2.4" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Cliente\" />
+    <Folder Include="Cliente\Request\" />
   </ItemGroup>
 
 </Project>

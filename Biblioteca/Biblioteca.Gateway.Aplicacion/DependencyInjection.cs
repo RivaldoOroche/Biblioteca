@@ -4,6 +4,8 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using MongoDB.Driver;
 using Release.MongoDB.Repository;
 using Biblioteca.Gateway.Aplicacion;
+using Biblioteca.Gateway.Aplicacion.Common;
+
 
 
 namespace Biblioteca.Gateway.Aplicacion
@@ -12,19 +14,30 @@ namespace Biblioteca.Gateway.Aplicacion
     {
         public static IServiceCollection AddAplicacion(this IServiceCollection services, IConfiguration configuration)
         {
-            #region Mongo
+            services.AddClientes(configuration);
 
-           
+            return services;
+
+
+        }
+        public static IServiceCollection AddClientes(this IServiceCollection services, IConfiguration configuration)
+        {
+            //CLIENT_SETTINGS
+            var msSettings = new ClientSettings();
+            configuration.Bind(nameof(ClientSettings), msSettings);
+
+            #region Cliente Ms Clientes
+
+            services.AddHttpClient("MsClientes", client =>
+            {
+                client.BaseAddress = new Uri(msSettings.ClienteUrl);
+            });
+
             #endregion
 
-            #region Servicios
-
-            //services.AddScoped<IGatewayService, GatewayService>();
-
-            #endregion
+            services.AddTransient<ClientesClient.IClient, ClientesClient.Client>();
 
             return services;
         }
-
     }
 }

@@ -1,28 +1,26 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using dominio = Biblioteca.Cliente.Dominio.Entidades;
+using Clientes = Biblioteca.Gateway.Aplicacion.ClientesClient;
 using static Biblioteca.Gateway.Api.Routes.ApiRoutes;
-using Clientes = Biblioteca.Gateway.Api.ClienteClient;
 
-using Biblioteca.Cliente.Aplicacion.Cliente;
-using Biblioteca.Gateway.Api.ClienteClient;
-
-namespace Biblioteca.Cliente.Api.Controllers
+namespace Biblioteca.Gateway.Api.Controllers
 {
     [ApiController]
     public class ClienteController : ControllerBase
     {
-        public readonly Clientes.IClient _client;
 
-        public ClienteController(IClient client)
+        private readonly Clientes.IClient _clientesClient;
+
+        public ClienteController(Clientes.IClient clientesCliente)
         {
-            _client = client;
+            _clientesClient = clientesCliente;
         }
+
         [HttpGet(RouteCliente.GetAll)]
         public Task<ICollection<Clientes.Cliente>> ListarClientes()
         {
-            var listaClientes = _client.ApiV1ClienteAllAsync();
+            var listaClientes = _clientesClient.ApiV1ClienteAllAsync();
             return listaClientes;
         }
     }

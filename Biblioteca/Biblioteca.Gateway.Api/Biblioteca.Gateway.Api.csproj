@@ -7,20 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MongoDB.Bson" Version="2.19.0" />
-    <PackageReference Include="MongoDB.Driver" Version="2.19.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
-    <PackageReference Include="Release.MongoDB.Repository" Version="1.2.4" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
-    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Biblioteca.Cliente.Api\Biblioteca.Cliente.Api.csproj" />
-    <ProjectReference Include="..\Biblioteca.Cliente.Aplicacion\Biblioteca.Cliente.Aplicacion.csproj" />
-    <ProjectReference Include="..\Biblioteca.Cliente.Dominio\Biblioteca.Cliente.Dominio.csproj" />
-    <ProjectReference Include="..\Biblioteca.Cliente.Infraestructura\Biblioteca.Cliente.Infraestructura.csproj" />
     <ProjectReference Include="..\Biblioteca.Gateway.Aplicacion\Biblioteca.Gateway.Aplicacion.csproj" />
   </ItemGroup>
 
