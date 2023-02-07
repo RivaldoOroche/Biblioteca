@@ -10,17 +10,17 @@ namespace Biblioteca.Gateway.Api.Controllers
     public class ClienteController : ControllerBase
     {
 
-        private readonly Clientes.IClient _clientesClient;
+        private readonly Clientes.IClient _client;
 
-        public ClienteController(Clientes.IClient clientesCliente)
+        public ClienteController(Clientes.IClient client)
         {
-            _clientesClient = clientesCliente;
+            _client = client;
         }
 
         [HttpGet(RouteCliente.GetAll)]
         public Task<ICollection<Clientes.Cliente>> ListarClientes()
         {
-            var listaClientes = _clientesClient.ApiV1ClienteAllAsync();
+            var listaClientes = _client.ApiV1ClienteAllAsync();
             return listaClientes;
         }
     }
